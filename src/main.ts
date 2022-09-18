@@ -10,7 +10,7 @@ const router = createRouter({
     history:history,
     routes:[
         {path:'/', component:Home},  //易错写为components
-        {path:'/', component:Doc}
+        {path:'/doc', component:Doc}
     ]
 })
 
