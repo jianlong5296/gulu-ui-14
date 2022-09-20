@@ -1,5 +1,5 @@
 <template>
-  <button class="gulu-button" :class="`theme-${theme}`">
+  <button class="gulu-button" :class="`gulu-theme-${theme}`">
     <slot />
   </button>
 </template>
@@ -13,7 +13,7 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 $h: 32px;
 $border-color: #d9d9d9;
 $color: #333;
@@ -27,12 +27,12 @@ $radius: 4px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  white-space: nowrap;
+  white-space: nowrap; //强制文本文字内容不换行
   background: white;
   color: $color;
   border: 1px solid $border-color;
   border-radius: $radius;
-  box-shadow: 0 1px 0 fade-out(black, 0.95);
+  box-shadow: 0 1px 0 fade-out(black, 0.95); //fade-out淡出
   & + & {
     margin-left: 8px;
   }
