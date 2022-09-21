@@ -6,6 +6,7 @@
     <Button theme="button">你好</Button>
     <Button theme="link">你好</Button>
     <Button theme="text">你好</Button>
+    <wired-button theme="link">Click Me</wired-button>
   </div>
   <h1>示例2</h1>
   <div>
@@ -51,6 +52,13 @@
     <h1>示例5</h1>
     <div>
       <Button loading>加载中</Button>
+      <Button>加载完毕</Button>
+    </div>
+    <h1>示例6</h1>
+    <div>
+      <wired-button>Click Me</wired-button>
+      <wired-button disabled>Disabled</wired-button>
+      <wired-button elevation="5">Elevation</wired-button>
     </div>
   </div>
 </template>
