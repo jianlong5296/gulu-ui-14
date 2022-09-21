@@ -4,11 +4,11 @@
     <div class="gulu-dialog-wrapper">
       <div class="gulu-dialog">
         <header>
-          标题 <span @click="close" class="gulu-dialog-close"></span>
+          <slot name="title" />
+          <span @click="close" class="gulu-dialog-close"></span>
         </header>
         <main>
-          <p>第一行字</p>
-          <p>第二行字</p>
+          <slot name="content" />
         </main>
         <footer>
           <!-- 引入组件时，button要大写，易错 -->
