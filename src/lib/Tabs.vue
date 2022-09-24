@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="gulu-tabs-content">
-      <component class="gulu-tabs-content-item" :is="current" />
+      <component :is="current" :key="current.props.title" />
     </div>
   </div>
 </template>
@@ -34,9 +34,7 @@ export default {
       }
     });
     const current = computed(() => {
-      return defaults.filter((tag) => {
-        return tag.props.title === props.selected;
-      })[0];
+      return defaults.find((tag) => tag.props.title === props.selected);
     });
     const titles = defaults.map((tag) => {
       return tag.props.title;
@@ -76,13 +74,6 @@ $border-color: #d9d9d9;
   }
   &-content {
     padding: 8px 0;
-    &-item {
-      display: none;
-
-      &.selected {
-        display: block;
-      }
-    }
   }
 }
 </style>
