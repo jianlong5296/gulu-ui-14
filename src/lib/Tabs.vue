@@ -53,6 +53,9 @@ export default {
         throw new Error("Tabs 子标签必须为 Tab");
       }
     });
+    const current = computed(() => {
+      return defaults.find((tag) => tag.props.title === props.selected);
+    });
     const titles = defaults.map((tag) => {
       return tag.props.title;
     });
@@ -62,6 +65,7 @@ export default {
     return {
       defaults,
       titles,
+      current,
       select,
       selectedItem,
       indicator,
